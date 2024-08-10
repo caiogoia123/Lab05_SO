@@ -1,6 +1,8 @@
 # Lab05_SO
 IPC com pipe, fifo, sockets, shm
 
+Autor: Caio Goia RA:2482070
+
 # Exercício 1
 
 Este projeto demonstra a comunicação entre dois programas utilizando FIFOs (named pipes) no Linux. O projeto inclui dois programas: um escritor que envia strings para o FIFO e um leitor que recebe e processa essas strings.

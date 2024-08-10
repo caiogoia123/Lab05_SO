@@ -13,9 +13,13 @@ Estrutura do Projeto
 
 # Como compilar e testar o codigo 
 
-Para compilar os programas, use o comando make:
+Para compilar os programas, use o comando:
 
-Em um terminal, para iniciar o leitor.c, execute o comando no terminal: ./leitor
-Agora para o escritor, abra outro terminal e execute o comando: ./escritor 
+    make
+
+Em um terminal, para iniciar o leitor.c, execute o comando no terminal: 
+    ./leitor
+Agora para o escritor, abra outro terminal e execute o comando: 
+    ./escritor 
 
 No terminal do escritor, digite as strings que deseja enviar e pressione Enter após cada string.

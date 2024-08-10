@@ -21,13 +21,21 @@ const char* translate(const char *code, const char *word) {
     return "ERROR:UNKNOWN";
 }
 
+
+
 void handle_client(int client_socket) {
     char buffer[BUFFER_SIZE];
     ssize_t bytes_received;
 
-    // Loop para continuar recebendo traduções até receber "NO-NO"
+    // Mensagem de depuração
+    printf("Novo cliente conectado.\n");
+
     while ((bytes_received = recv(client_socket, buffer, BUFFER_SIZE - 1, 0)) > 0) {
         buffer[bytes_received] = '\0';
+
+        // Mensagem de depuração
+        printf("Recebido: %s\n", buffer);
+
         if (strcmp(buffer, "NO-NO") == 0) {
             break;
         }
@@ -42,9 +50,11 @@ void handle_client(int client_socket) {
         send(client_socket, translation, strlen(translation), 0);
     }
 
+    printf("Cliente desconectado.\n");
     close(client_socket);
     exit(0);
 }
+
 
 int main() {
     int server_socket, client_socket;

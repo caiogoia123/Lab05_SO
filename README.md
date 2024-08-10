@@ -59,3 +59,35 @@ Em um terminal, execute o programa ex03 com o comando:
     ./ex03
 
 Digite o número de elementos dos vetores e o número de processos desejado. O programa exibirá os vetores e o resultado da soma no terminal.
+
+# Exercício 4
+
+Este exercício implementa um serviço de tradução simples utilizando sockets UNIX. O serviço permite que um cliente envie palavras para tradução de uma língua para outra. O servidor realiza a tradução e envia a resposta de volta ao cliente. Este exemplo usa sockets UNIX para comunicação entre o cliente e o servidor.
+
+# Como compilar e testar o codigo 
+
+Para compilar o programa, use o comando:
+
+    make
+
+Em um terminal, execute o servidor:
+
+    ./servidor
+
+O servidor ficará aguardando conexões dos clientes.
+
+Inicie o Cliente em outro terminal:
+
+    ./cliente
+
+O cliente solicitará que você digite a palavra para traduzir.
+No terminal do cliente, digite a palavra para traduzir no formato code:word. Exemplo:
+
+    pt-en:cachorro
+
+
+O cliente exibirá a tradução recebida do servidor. Se a tradução não for encontrada, o servidor retornará ERROR:UNKNOWN.
+
+Para encerrar a conexão com o servidor, digite NO-NO no terminal do cliente e pressione Enter.
+
+    NO-NO

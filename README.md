@@ -27,3 +27,19 @@ Agora para o escritor, abra outro terminal e execute o comando:
 
 
 No terminal do escritor, digite as strings que deseja enviar e pressione Enter após cada string.
+
+# Exercicio 02
+
+Este projeto demonstra a manipulação de sinais e a escrita de dados em um arquivo utilizando C no Linux. O programa principal (ex02.c) abre um arquivo para escrita e permite que o usuário insira dados que são registrados no arquivo. O programa também lida com sinais de interrupção e terminação para garantir uma finalização limpa.
+
+# Como compilar e testar o codigo 
+
+Para compilar os programas, use o comando:
+
+    make
+
+Em um terminal, execute o comando para iniciar o programa ex02:
+
+    ./ex02
+
+Digite as entradas que deseja armazenar no arquivo dados.txt. Para finalizar o programa, use CTRL+C para enviar um sinal de interrupção ou kill <PID> para enviar um sinal de terminação. O programa fechará o arquivo e exibirá uma mensagem de finalização limpa.

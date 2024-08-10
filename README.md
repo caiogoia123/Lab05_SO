@@ -1,7 +1,7 @@
 # Lab05_SO
 IPC com pipe, fifo, sockets, shm
 
-# Exercicio 1
+# Exercício 1
 
 Este projeto demonstra a comunicação entre dois programas utilizando FIFOs (named pipes) no Linux. O projeto inclui dois programas: um escritor que envia strings para o FIFO e um leitor que recebe e processa essas strings.
 
@@ -28,7 +28,7 @@ Agora para o escritor, abra outro terminal e execute o comando:
 
 No terminal do escritor, digite as strings que deseja enviar e pressione Enter após cada string.
 
-# Exercicio 02
+# Exercício 2
 
 Este projeto demonstra a manipulação de sinais e a escrita de dados em um arquivo utilizando C no Linux. O programa principal (ex02.c) abre um arquivo para escrita e permite que o usuário insira dados que são registrados no arquivo. O programa também lida com sinais de interrupção e terminação para garantir uma finalização limpa.
 
@@ -43,3 +43,19 @@ Em um terminal, execute o comando para iniciar o programa ex02:
     ./ex02
 
 Digite as entradas que deseja armazenar no arquivo dados.txt. Para finalizar o programa, use CTRL+C para enviar um sinal de interrupção ou kill <PID> para enviar um sinal de terminação. O programa fechará o arquivo e exibirá uma mensagem de finalização limpa.
+
+# Exercício 3
+
+Este projeto demonstra a comunicação entre processos utilizando memória compartilhada. O programa principal (ex03.c) cria dois vetores de inteiros, utiliza múltiplos processos para somar os vetores e exibe o resultado. O uso de memória compartilhada permite que todos os processos acessem e modifiquem os dados de forma eficiente.
+
+# Como compilar e testar o codigo 
+
+Para compilar o programa, use o comando:
+
+    make
+
+Em um terminal, execute o programa ex03 com o comando:
+
+    ./ex03
+
+Digite o número de elementos dos vetores e o número de processos desejado. O programa exibirá os vetores e o resultado da soma no terminal.

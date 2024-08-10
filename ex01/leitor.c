@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <ctype.h>
+#include <sys/stat.h>  // Incluir este cabeçalho para usar mkfifo
 
 #define FIFO_NAME "/tmp/meu_fifo"
 #define BUFFER_SIZE 256

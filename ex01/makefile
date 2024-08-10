@@ -12,7 +12,6 @@ escritor: escritor.c
 
 leitor: leitor.c
 	$(CC) $(CFLAGS) -o leitor leitor.c
-	
 
 # Alvo para rodar ambos os programas (leitor primeiro, depois escritor)
 run: all

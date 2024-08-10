@@ -7,8 +7,10 @@ Github do projeto: https://github.com/caiogoia123/Lab05_SO
 
 # Ambiente de Teste
 
-Sistema Operacional: Ubuntu 22.04.4 LTS
+Sistema Operacional: Ubuntu 22.04.4 LTS 
+
 Arquitetura: x86_64
+
 Compilador GCC:(Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 
 

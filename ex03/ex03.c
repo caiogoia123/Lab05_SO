@@ -7,6 +7,9 @@
 #include <string.h>
 
 #define MAX_SIZE 10000
+#ifndef MAP_ANONYMOUS
+#define MAP_ANONYMOUS 0x20
+#endif
 
 // Estrutura para a memória compartilhada
 typedef struct {
@@ -30,6 +33,18 @@ void child_process(int start, int end, shared_data_t *shared) {
     // Marca que o processo terminou
     shared->done[getpid() % shared->num_processes] = 1;
     exit(0);
+}
+
+void print_vector(const char *title, int *vector, int num_elements) {
+    printf("%s\n", title);
+    printf("{");
+    for (int i = 0; i < num_elements; i++) {
+        printf("%d", vector[i]);
+        if (i < num_elements - 1) {
+            printf(", ");
+        }
+    }
+    printf("}\n");
 }
 
 int main() {
@@ -70,6 +85,10 @@ int main() {
     }
     memset(shared->done, 0, num_processes * sizeof(int));
 
+    // Exibe os vetores
+    print_vector("Vector 1:", shared->vector1, num_elements);
+    print_vector("Vector 2:", shared->vector2, num_elements);
+
     // Cria os processos filhos
     pid_t pid;
     for (int i = 0; i < num_processes; i++) {
@@ -93,11 +112,7 @@ int main() {
     }
 
     // Exibe o resultado
-    printf("Resultado da soma dos vetores:\n");
-    for (int i = 0; i < num_elements; i++) {
-        printf("%d ", shared->result[i]);
-    }
-    printf("\n");
+    print_vector("Resultado da soma dos vetores:", shared->result, num_elements);
 
     // Limpa a memória compartilhada
     munmap(shared->vector1, num_elements * sizeof(int));

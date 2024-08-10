@@ -4,6 +4,13 @@ IPC com pipe, fifo, sockets, shm
 Autor: Caio Goia RA:2482070
 Github do projeto: https://github.com/caiogoia123/Lab05_SO
 
+# Ambiente de Teste
+
+Sistema Operacional: Ubuntu 22.04.4 LTS
+Arquitetura: x86_64
+Compilador GCC:(Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+
+
 # Exercício 1
 
 Este projeto demonstra a comunicação entre dois programas utilizando FIFOs (named pipes) no Linux. O projeto inclui dois programas: um escritor que envia strings para o FIFO e um leitor que recebe e processa essas strings.
